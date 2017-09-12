@@ -4,6 +4,7 @@ h1 {
 }
 nav {
   position: fixed;
+  top: 0px;
   width: 100%;
   background-color: lightgreen;
 }
