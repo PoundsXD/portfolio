@@ -20,8 +20,15 @@ $(window).resize(function() {
   var dynamicNav = $('nav').outerHeight(true);
   $('.aboutMe').css('margin-top', dynamicNav);
 });
-/*$(document, window).on('ready resize', function() {
+$('.navDropdownEd').on('click', function() {
+  $('.navDropdownEd').addClass('extended');
+  $('.education').css('display', 'block');
   var dynamicNav = $('nav').outerHeight(true);
   $('.aboutMe').css('margin-top', dynamicNav);
-  console.log(dynamicNav);
-});*/
+});
+$('.education').on('click', function() {
+  $('.navDropdownEd').removeClass('extended');
+  $('.education').css('display', 'none');
+  var dynamicNav = $('nav').outerHeight(true);
+  $('.aboutMe').css('margin-top', dynamicNav);
+});
