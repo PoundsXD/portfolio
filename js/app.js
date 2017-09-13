@@ -13,6 +13,15 @@ var busMall = new ProjectData('Bus Mall', 'Code Fellows 201 Week 3', 'url');
 var homeWorkout = new ProjectData('HomeFit', 'Code Fellows 201 Project Week', 'url');
 
 $(document).ready(function() {
-  var dynamicNav = $('nav').height();
+  var dynamicNav = $('nav').outerHeight(true);
   $('.aboutMe').css('margin-top', dynamicNav);
 });
+$(window).resize(function() {
+  var dynamicNav = $('nav').outerHeight(true);
+  $('.aboutMe').css('margin-top', dynamicNav);
+});
+/*$(document, window).on('ready resize', function() {
+  var dynamicNav = $('nav').outerHeight(true);
+  $('.aboutMe').css('margin-top', dynamicNav);
+  console.log(dynamicNav);
+});*/
