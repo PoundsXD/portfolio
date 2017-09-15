@@ -19,18 +19,6 @@ $(window).resize(function() {
   var dynamicNav = $('nav').outerHeight(true) + 15;
   $('.aboutMe').css('margin-top', dynamicNav);
 });
-/*$('.navDropdownEd').on('click', function() {
-  $('.navDropdownEd').addClass('extended');
-  $('.education').css('display', 'block');
-  var dynamicNav = $('nav').outerHeight(true) + 15;
-  $('.aboutMe').css('margin-top', dynamicNav);
-});
-$('.education').on('click', function() {
-  $('.navDropdownEd').removeClass('extended');
-  $('.education').css('display', 'none');
-  var dynamicNav = $('nav').outerHeight(true) + 15;
-  $('.aboutMe').css('margin-top', dynamicNav);
-});*/
 function populateNav() {
   $(this).addClass('extended');
   $(this).children().show();

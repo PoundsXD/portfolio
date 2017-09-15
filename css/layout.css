@@ -12,6 +12,7 @@ nav {
 .navDropdownEd, .navDropdownPr, .navDropdownWh {
   float: left;
   margin-left: 10%;
+  width: 20%;
   font-size: 5vw;
   cursor: pointer;
 }
