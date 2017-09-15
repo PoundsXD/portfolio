@@ -5,7 +5,6 @@ function ProjectData(name, date, sitePath) {
   this.name = name;
   this.date = date;
   this.sitePath = sitePath;
-  //this.push(projectArray);
 }
 var aboutMe = new ProjectData('About Me', 'Code Fellows 201 Week 1', 'url');
 var salmonCookie = new ProjectData('Salmon Cookies', 'Code Fellows 201 Week 2', 'url');
@@ -20,7 +19,7 @@ $(window).resize(function() {
   var dynamicNav = $('nav').outerHeight(true) + 15;
   $('.aboutMe').css('margin-top', dynamicNav);
 });
-$('.navDropdownEd').on('click', function() {
+/*$('.navDropdownEd').on('click', function() {
   $('.navDropdownEd').addClass('extended');
   $('.education').css('display', 'block');
   var dynamicNav = $('nav').outerHeight(true) + 15;
@@ -29,6 +28,22 @@ $('.navDropdownEd').on('click', function() {
 $('.education').on('click', function() {
   $('.navDropdownEd').removeClass('extended');
   $('.education').css('display', 'none');
+  var dynamicNav = $('nav').outerHeight(true) + 15;
+  $('.aboutMe').css('margin-top', dynamicNav);
+});*/
+function populateNav() {
+  $(this).addClass('extended');
+  $(this).children().show();
+  $(this).off('click', populateNav);
+  var dynamicNav = $('nav').outerHeight(true) + 15;
+  $('.aboutMe').css('margin-top', dynamicNav);
+}
+$('section').on('click', populateNav);
+$('li').on('click', function(event) {
+  event.stopPropagation();
+  $(this).parent().parent().removeClass('extended');
+  $(this).parent().hide();
+  $('section').on('click', populateNav);
   var dynamicNav = $('nav').outerHeight(true) + 15;
   $('.aboutMe').css('margin-top', dynamicNav);
 });
