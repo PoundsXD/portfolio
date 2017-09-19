@@ -3,10 +3,14 @@
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 15px;
+  filter: opacity(70%);
 }
 body {
   background-image: url(../images/GreyScale82.jpg);
   background-size: inherit;
   background-position: center;
   background-repeat: no-repeat;
+}
+.project-window {
+  display: none;
 }
