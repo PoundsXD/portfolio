@@ -1,5 +1,5 @@
 const EXPRESS = require('express');
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5000;
 const PARSE = require('body-parser').urlencoded({extended:true});
 const app = EXPRESS();
 app.get('/', function(request, response){
