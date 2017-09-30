@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/clear.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script>
+    <script src="https://use.fontawesome.com/de1c39c65e.js"></script>
+  </head>
+  <body>
+    <nav>
+      <h1>Brian W Portfolio
+      </h1>
+      <section class = "navDropdownEd">Education
+        <ul class="education">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <li>Highschool
+          </li>
+          <li>College
+          </li>
+        </ul class="education">
+      </section>
+      <section class = "navDropdownPr">Projects
+        <ul class = "projects">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <li>AboutMe
+          </li>
+          <li>Salmon Cookies
+          </li>
+          <li>Bus Mall
+          </li>
+          <li>HomeFit
+          </li>
+        </ul>
+      </section>
+      <section class = "navDropdownWh">Work History
+        <ul class = "workHistory">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <li>IT
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <div class = "aboutMe">
+      <h2>About Me:
+      </h2>
+      <p>This will eventually be some random stuff about me.
+      </p>
+    </div>
+    <script class = "project-window" type="text/x-handlebars-template">
+      <div>
+        <h2>{{name}}
+        </h2>
+        <p>Published on <span>{{date}}</span></p>
+        <iframe src = "{{sitePath}}" />
+      </div>
+    </script>
+    <hr/>
+    <div>
+      <a href = ""><img src = ""/></a>
+    </div>
+    <footer>
+      <hr/>
+    </footer>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+</html>
